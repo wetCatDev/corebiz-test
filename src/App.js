@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar/Navbar";
+import Products from "./components/Products/Products";
+import Slider from "./components/Slider/Slider";
+import Footer from "./components/Footer/Footer";
+import { useState } from "react";
 
 function App() {
+
+  const [shop, setShop] = useState([]);
+  const [counter, setCounter] = useState(0);
+
+  function handleClick(e) {
+    setShop([...shop, e.target.value]);
+    setCounter(counter + 1)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar shopState={shop} counterState={counter}/>
+      <Slider />
+      <Products addFunction={handleClick}/>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,27 @@
+navbar {
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 4fr 150px 1fr;
+    align-items: center;
+    padding: 0 250px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+navbar img{
+    height: 50px;
+    width: auto;
+}
+.navbar__item {
+    margin: 0 10px;
+}
+
+.navbar__account {
+    display: flex;
+    justify-content: space-around;
+}

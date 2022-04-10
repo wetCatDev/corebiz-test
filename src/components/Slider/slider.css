@@ -1,0 +1,7 @@
+.slider__container {
+    margin-top: 80px;
+}
+.slider__container img{
+    width: 100%;
+    height: auto;
+}
